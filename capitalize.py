@@ -1,5 +1,6 @@
 def capitalize(text):
-    """Возвращает строку с первой заглавной буквой."""
-    if not isinstance(text, str):
-        raise ValueError("Input must be a string")
-    return text.capitalize()
+    if text == '':
+        return ''
+    first_char = text[0].upper()
+    rest_substring = text[1:]
+    return f'{first_char}{rest_substring}'
